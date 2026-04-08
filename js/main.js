@@ -21,6 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 5. Actualizar año del footer
   updateFooterYear();
+
+  // 6. Configurar comportamiento del botón flotante (IntersectionObserver)
+  initFloatingWhatsApp();
 });
 
 /**
@@ -42,4 +45,29 @@ function bindWhatsAppButtons() {
 function updateFooterYear() {
   const el = document.getElementById('js-year');
   if (el) el.textContent = new Date().getFullYear();
+}
+
+/**
+ * Controla la visibilidad del botón flotante de WhatsApp.
+ * Lo oculta mientras la sección Hero es visible para evitar saturación de botones.
+ */
+function initFloatingWhatsApp() {
+  const floatingBtn = document.querySelector('.floating-wa');
+  const heroSection = document.querySelector('.hero');
+  
+  if (!floatingBtn || !heroSection) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      // Si el hero es visible, ocultar el botón flotante
+      if (entry.isIntersecting) {
+        floatingBtn.classList.remove('is-visible');
+      } else {
+        // Al salir del hero, mostrar el botón flotante
+        floatingBtn.classList.add('is-visible');
+      }
+    });
+  }, { rootMargin: '-15% 0px 0px 0px' });
+
+  observer.observe(heroSection);
 }

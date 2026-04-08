@@ -306,12 +306,20 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform var(--transition-fast), box-shadow var(--transition-fast);
   animation: pulse 2.5s infinite;
   border: none;
   cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
 }
-.floating-wa:hover { transform: scale(1.1); animation: none; }
+.floating-wa.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.floating-wa.is-visible:hover { transform: scale(1.1) translateY(0); animation: none; }
 
 .floating-wa__tooltip {
   position: absolute;

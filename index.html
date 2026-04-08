@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Compra productos de catálogo Natura, Tupperware, Betterware y más por WhatsApp. Rápido, fácil y sin complicaciones." />
+  <title>Ventas P&G - Pide por WhatsApp</title>
+  <link rel="icon" type="image/jpeg" href="assets/logo3.png" />
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Estilos (orden importante: base → componentes → secciones → responsive) -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+
+  <!-- =============================================
+       TOPBAR
+  ============================================= -->
+  <header class="topbar" role="banner">
+    <div class="container topbar__inner">
+      <a href="/" class="topbar__logo" aria-label="Ventas P&G — Inicio">
+        <img src="assets/logo3.png" alt="Logo" class="topbar__logo-img" />
+        <span>Ventas <span class="topbar__logo-accent">P & G</span></span>
+      </a>
+      <button class="btn btn--wa btn--sm js-wa-general" aria-label="Contactar por WhatsApp">
+        <svg class="icon" aria-hidden="true">
+          <use href="#icon-whatsapp" />
+        </svg>
+        Escríbenos
+      </button>
+    </div>
+  </header>
+
+  <!-- =============================================
+       HERO
+  ============================================= -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__circle hero__circle--green" aria-hidden="true"></div>
+    <div class="hero__circle hero__circle--amber" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero__inner">
+        <p class="hero__eyebrow">
+          <span class="hero__eyebrow-dot" aria-hidden="true"></span>
+          Atención inmediata por WhatsApp
+        </p>
+        <h1 id="hero-title" class="hero__title">
+          Compra de <em>catálogo</em>,<br />sin complicaciones
+        </h1>
+        <p class="hero__sub">
+          Natura, Tupperware, Betterware, Avon, Price Shoes y más — directo a tu puerta. Sin buscar entre cientos de
+          páginas, sin esperar a una vendedora.
+        </p>
+        <div class="hero__actions">
+          <button class="btn btn--wa btn--lg js-wa-general">
+            <svg class="icon" aria-hidden="true">
+              <use href="#icon-whatsapp" />
+            </svg>
+            Pedir por WhatsApp
+          </button>
+          <a href="#catalogos" class="btn btn--ghost btn--lg">
+            <svg class="icon" aria-hidden="true">
+              <use href="#icon-book" />
+            </svg>
+            Ver catálogos
+          </a>
+        </div>
+        <ul class="hero__trust" aria-label="Beneficios">
+          <li class="hero__trust-item">
+            <span class="hero__trust-dot" aria-hidden="true"></span>Respuesta en menos de 1 hora
+          </li>
+          <li class="hero__trust-item">
+            <span class="hero__trust-dot" aria-hidden="true"></span>Envío a domicilio
+          </li>
+          <li class="hero__trust-item">
+            <span class="hero__trust-dot" aria-hidden="true"></span>Productos 100% originales
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Urgency Banner -->
+  <div class="urgency-banner" role="alert" aria-live="polite">
+    🔥 Ofertas de esta semana activas
+    <span class="urgency-banner__sep" aria-hidden="true">•</span>
+    ¡Solo por tiempo limitado!
+    <span class="urgency-banner__sep" aria-hidden="true">•</span>
+    Escríbenos antes de que se acaben 🔥
+  </div>
+
+  <!-- =============================================
+       PRODUCTOS DESTACADOS
+  ============================================= -->
+  <section class="section section--bg-light" id="productos" aria-labelledby="products-title">
+    <div class="container">
+      <div class="section__header">
+        <div>
+          <h2 id="products-title" class="section__title">Productos destacados</h2>
+          <p class="section__sub">Los más pedidos esta semana</p>
+        </div>
+        <a href="#catalogos" class="link-all">Ver catálogos completos →</a>
+      </div>
+      <!-- Grid renderizado por js/render.js -->
+      <div class="products-grid" id="js-products-grid" aria-label="Cuadrícula de productos destacados">
+        <!-- Contenido dinámico -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       OFERTAS DE LA SEMANA
+  ============================================= -->
+  <section class="section weekly-section" id="ofertas" aria-labelledby="weekly-title">
+    <div class="weekly-section__glow" aria-hidden="true"></div>
+    <div class="container weekly-section__content">
+      <div class="section__header">
+        <div>
+          <h2 id="weekly-title" class="section__title">⚡ Ofertas de la semana</h2>
+          <p class="section__sub">Termina en:</p>
+          <!-- Countdown renderizado por js/countdown.js -->
+          <div class="countdown" aria-label="Tiempo restante de la oferta" role="timer">
+            <div class="countdown__unit">
+              <span class="countdown__num" id="js-cd-h">00</span>
+              <span class="countdown__label">horas</span>
+            </div>
+            <div class="countdown__unit">
+              <span class="countdown__num" id="js-cd-m">00</span>
+              <span class="countdown__label">min</span>
+            </div>
+            <div class="countdown__unit">
+              <span class="countdown__num" id="js-cd-s">00</span>
+              <span class="countdown__label">seg</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Grid renderizado por js/render.js -->
+      <div class="products-grid products-grid--dark" id="js-weekly-grid" aria-label="Cuadrícula de ofertas semanales">
+        <!-- Contenido dinámico -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       CATÁLOGOS
+  ============================================= -->
+  <section class="section section--bg-white" id="catalogos" aria-labelledby="catalogs-title">
+    <div class="container">
+      <div class="section__header">
+        <div>
+          <h2 id="catalogs-title" class="section__title">Nuestros catálogos</h2>
+          <p class="section__sub">Explora la colección completa de cada marca</p>
+        </div>
+      </div>
+      <!-- Grid renderizado por js/render.js -->
+      <div class="catalogs-grid" id="js-catalogs-grid" aria-label="Cuadrícula de catálogos disponibles">
+        <!-- Contenido dinámico -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       CÓMO FUNCIONA
+  ============================================= -->
+  <section class="section section--bg-light" id="como" aria-labelledby="how-title">
+    <div class="container">
+      <div class="section__header section__header--centered">
+        <h2 id="how-title" class="section__title">¿Cómo funciona?</h2>
+        <p class="section__sub">Comprar es muy fácil, en 3 pasos</p>
+      </div>
+      <ol class="steps" aria-label="Pasos para realizar una compra">
+        <li class="step-card">
+          <span class="step-card__num" aria-hidden="true">01</span>
+          <div class="step-card__icon" aria-hidden="true">🛍️</div>
+          <h3 class="step-card__title">Explora productos</h3>
+          <p class="step-card__desc">Navega los productos destacados o descarga los catálogos en PDF para ver toda la
+            colección.</p>
+        </li>
+        <li class="step-card">
+          <span class="step-card__num" aria-hidden="true">02</span>
+          <div class="step-card__icon" aria-hidden="true">💬</div>
+          <h3 class="step-card__title">Escríbenos por WhatsApp</h3>
+          <p class="step-card__desc">Da clic en "Pedir por WhatsApp" — se abrirá un mensaje prellenado con el producto
+            que te interesa.</p>
+        </li>
+        <li class="step-card">
+          <span class="step-card__num" aria-hidden="true">03</span>
+          <div class="step-card__icon" aria-hidden="true">📦</div>
+          <h3 class="step-card__title">Nosotros nos contactamos para dar seguimiento a tu pedido</h3>
+          <p class="step-card__desc">Confirmamos disponibilidad, coordinas el pago y recibes tu pedido.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- =============================================
+       CTA FINAL
+  ============================================= -->
+  <section class="section cta-section" aria-labelledby="cta-title">
+    <div class="cta-section__glow" aria-hidden="true"></div>
+    <div class="container cta-section__inner">
+      <h2 id="cta-title" class="section__title">¿Lista para pedir?</h2>
+      <p class="section__sub">Escríbenos ahora y te respondemos en menos de una hora. Sin formularios, sin esperas.</p>
+      <div class="cta-section__actions">
+        <button class="btn btn--wa btn--xl btn--pulse js-wa-general">
+          <svg class="icon icon--lg" aria-hidden="true">
+            <use href="#icon-whatsapp" />
+          </svg>
+          Escribir por WhatsApp ahora
+        </button>
+        <a href="https://instagram.com/ventaspyg_oficial" target="_blank" rel="noopener noreferrer"
+          class="btn btn--ig btn--xl">
+          <svg class="icon icon--lg" aria-hidden="true">
+            <use href="#icon-instagram" />
+          </svg>
+          Visítanos en Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       FOOTER
+  ============================================= -->
+  <footer class="footer" role="contentinfo">
+    <p class="footer__text">
+      © <span id="js-year"></span> <span class="footer__brand">MiCatálogo</span> — Hecho con ❤️ para vendedoras de
+      catálogo
+    </p>
+  </footer>
+
+  <!-- =============================================
+       BOTÓN FLOTANTE DE WHATSAPP
+  ============================================= -->
+  <button class="floating-wa js-wa-general" aria-label="Abrir conversación en WhatsApp" title="Contactar por WhatsApp">
+    <span class="floating-wa__tooltip" aria-hidden="true">¡Escríbenos!</span>
+    <svg class="icon icon--lg" aria-hidden="true">
+      <use href="#icon-whatsapp" />
+    </svg>
+  </button>
+
+  <!-- =============================================
+       SVG SPRITE — íconos inline reutilizables
+  ============================================= -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <symbol id="icon-whatsapp" viewBox="0 0 24 24">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+      <path
+        d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.529 5.845L.057 23.428l5.748-1.508A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.001-1.367l-.358-.213-3.714.974.99-3.626-.233-.372A9.818 9.818 0 0112 2.182c5.421 0 9.818 4.397 9.818 9.818S17.421 21.818 12 21.818z" />
+    </symbol>
+    <symbol id="icon-book" viewBox="0 0 24 24">
+      <path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z" />
+      <path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z" />
+    </symbol>
+    <symbol id="icon-file" viewBox="0 0 24 24">
+      <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+      <polyline points="14 2 14 8 20 8" />
+    </symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+    </symbol>
+  </svg>
+
+  <!-- Scripts en orden de dependencia -->
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/whatsapp.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/countdown.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

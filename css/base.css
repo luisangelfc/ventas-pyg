@@ -1,0 +1,163 @@
+/* ================================================================
+   base.css — Reset, variables CSS, tipografía y utilidades base
+   ================================================================ */
+
+/* ── Variables globales ──────────────────────────────────────── */
+:root {
+  /* Paleta de color */
+  --color-green:        #25D366;
+  --color-green-dark:   #128C7E;
+  --color-green-light:  #dcfce7;
+  --color-coral:        #FF6B6B;
+  --color-amber:        #F59E0B;
+  --color-ink:          #0f1117;
+  --color-ink-soft:     #2d3142;
+  --color-muted:        #6b7280;
+  --color-bg:           #faf9f6;
+  --color-surface:      #ffffff;
+  --color-border:       #e9e5df;
+
+  /* Tipografía */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
+
+  /* Espaciado */
+  --space-xs:   4px;
+  --space-sm:   8px;
+  --space-md:   16px;
+  --space-lg:   24px;
+  --space-xl:   40px;
+  --space-2xl:  72px;
+  --space-3xl:  100px;
+
+  /* Bordes */
+  --radius-sm:  8px;
+  --radius-md:  16px;
+  --radius-lg:  24px;
+  --radius-full: 9999px;
+
+  /* Sombras */
+  --shadow-sm:  0 2px 8px rgba(0, 0, 0, 0.07);
+  --shadow-md:  0 8px 24px rgba(0, 0, 0, 0.10);
+  --shadow-lg:  0 20px 50px rgba(0, 0, 0, 0.13);
+
+  /* Transiciones */
+  --transition-fast:   0.15s ease;
+  --transition-base:   0.25s ease;
+  --transition-slow:   0.4s ease;
+
+  /* Layout */
+  --container-max: 1200px;
+  --container-pad: 20px;
+}
+
+/* ── Reset ──────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* ── Tipografía base ─────────────────────────────────────────── */
+.section__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.section__sub {
+  font-size: 1rem;
+  color: var(--color-muted);
+  font-weight: 400;
+  margin-top: 0.5rem;
+}
+
+/* ── Layout ─────────────────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+.section {
+  padding-block: var(--space-2xl);
+}
+
+.section--bg-light  { background-color: var(--color-bg); }
+.section--bg-white  { background-color: var(--color-surface); }
+
+/* ── Íconos ─────────────────────────────────────────────────── */
+.icon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  vertical-align: middle;
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+.icon--lg {
+  width: 24px;
+  height: 24px;
+}
+
+/* ── Accesibilidad ──────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--color-green);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* ── Animaciones globales ───────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+  50%       { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); }
+}

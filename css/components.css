@@ -1,0 +1,374 @@
+/* ================================================================
+   components.css — Botones, etiquetas, tarjetas y componentes UI
+   ================================================================ */
+
+/* ── Botones ─────────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  font-family: var(--font-body);
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  transition:
+    background-color var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-base);
+  white-space: nowrap;
+  cursor: pointer;
+  border: none;
+}
+
+/* Tamaños */
+.btn--sm { font-size: 0.82rem; padding: 8px 18px; }
+.btn--md { font-size: 0.9rem;  padding: 12px 24px; }
+.btn--lg { font-size: 1rem;    padding: 16px 32px; }
+.btn--xl { font-size: 1.1rem;  padding: 18px 40px; }
+
+/* Variante WhatsApp */
+.btn--wa { background-color: var(--color-green); color: #fff; }
+.btn--wa:hover {
+  background-color: var(--color-green-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+}
+.btn--wa:active { transform: translateY(0); }
+
+/* Variante Instagram */
+.btn--ig { 
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+  color: #fff; 
+  text-decoration: none;
+}
+.btn--ig:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(220, 39, 67, 0.4);
+}
+.btn--ig:active { transform: translateY(0); }
+
+/* Variante Ghost */
+.btn--ghost {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.85);
+}
+.btn--ghost:hover { background-color: rgba(255, 255, 255, 0.14); }
+
+/* Modificador pulse */
+.btn--pulse { animation: pulse 2.5s infinite; }
+.btn--pulse:hover { animation: none; transform: scale(1.04); }
+
+/* Botón outline */
+.btn--outline {
+  background-color: var(--color-bg);
+  border: 1.5px solid var(--color-border);
+  color: var(--color-ink);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 10px var(--space-md);
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  transition:
+    border-color var(--transition-fast),
+    background-color var(--transition-fast);
+}
+.btn--outline:hover { border-color: var(--color-ink); background-color: #f0ece5; }
+
+/* ── Tags / Badges ───────────────────────────────────────────── */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+}
+.tag--offer { background-color: #fef3c7; color: #92400e; }
+.tag--pop   { background-color: #fce7f3; color: #9d174d; }
+.tag--last  { background-color: #fee2e2; color: #991b1b; }
+.tag--new   { background-color: #dbeafe; color: #1e40af; }
+
+/* ── Product Card ────────────────────────────────────────────── */
+.product-card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+.product-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+
+.product-card--dark {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+.product-card--dark:hover { border-color: rgba(37, 211, 102, 0.4); }
+
+.product-card__img-wrap {
+  position: relative;
+  height: 200px;
+  background-color: #f3f0eb;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.product-card--dark .product-card__img-wrap { background-color: rgba(255, 255, 255, 0.04); }
+.product-card__img-wrap img { transition: transform var(--transition-slow); }
+.product-card:hover .product-card__img-wrap img { transform: scale(1.06); }
+
+.product-card__badge { position: absolute; top: 12px; left: 12px; }
+
+.product-card__body {
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.product-card__name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  line-height: 1.35;
+  flex: 1;
+}
+.product-card--dark .product-card__name { color: rgba(255, 255, 255, 0.9); }
+
+.product-card__catalog {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  margin-top: 4px;
+}
+.product-card--dark .product-card__catalog { color: rgba(255, 255, 255, 0.4); }
+
+.product-card__prices {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.product-card__price {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+.product-card--dark .product-card__price { color: #fff; }
+
+.product-card__price-old {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  text-decoration: line-through;
+}
+.product-card--dark .product-card__price-old { color: rgba(255, 255, 255, 0.4); }
+
+.product-card__discount {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-coral);
+}
+
+.product-card__btn {
+  margin-top: var(--space-md);
+  width: 100%;
+  font-size: 0.88rem;
+  padding: 11px;
+}
+
+/* ── Stock bar ───────────────────────────────────────────────── */
+.stock-bar { margin-top: var(--space-sm); }
+.stock-bar__label {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 5px;
+}
+.stock-bar__track {
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+.stock-bar__fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-green), #4ade80);
+  border-radius: var(--radius-full);
+}
+
+/* ── Catalog Card ────────────────────────────────────────────── */
+.catalog-card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+.catalog-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+
+.catalog-card__img-wrap {
+  height: 180px;
+  position: relative;
+  overflow: hidden;
+}
+.catalog-card__img-wrap img { transition: transform var(--transition-slow); }
+.catalog-card:hover .catalog-card__img-wrap img { transform: scale(1.05); }
+
+.catalog-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+.catalog-card__brand {
+  position: absolute;
+  bottom: 12px;
+  left: 14px;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+
+.catalog-card__body { padding: var(--space-md); }
+.catalog-card__desc { font-size: 0.85rem; color: var(--color-muted); line-height: 1.5; }
+.catalog-card__actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+/* ── Countdown ───────────────────────────────────────────────── */
+.countdown { display: flex; gap: var(--space-sm); flex-wrap: wrap; margin-top: var(--space-md); }
+.countdown__unit {
+  background-color: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-sm);
+  padding: 12px var(--space-md);
+  text-align: center;
+  min-width: 64px;
+}
+.countdown__num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--color-green);
+  line-height: 1;
+}
+.countdown__label {
+  display: block;
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 4px;
+}
+
+/* ── Floating WA button ──────────────────────────────────────── */
+.floating-wa {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 200;
+  width: 58px;
+  height: 58px;
+  background-color: var(--color-green);
+  color: #fff;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  animation: pulse 2.5s infinite;
+  border: none;
+  cursor: pointer;
+}
+.floating-wa:hover { transform: scale(1.1); animation: none; }
+
+.floating-wa__tooltip {
+  position: absolute;
+  right: 68px;
+  background-color: var(--color-ink);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 600;
+  white-space: nowrap;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-fast);
+}
+.floating-wa:hover .floating-wa__tooltip { opacity: 1; }
+
+/* ── Step Card ───────────────────────────────────────────────── */
+.step-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  transition: box-shadow var(--transition-base);
+}
+.step-card:hover { box-shadow: var(--shadow-md); }
+
+.step-card__num {
+  position: absolute;
+  top: -14px;
+  right: 20px;
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.06);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.step-card__icon {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-md);
+  font-size: 1.8rem;
+}
+.step-card:nth-child(1) .step-card__icon { background-color: #dcfce7; }
+.step-card:nth-child(2) .step-card__icon { background-color: #fef3c7; }
+.step-card:nth-child(3) .step-card__icon { background-color: #fee2e2; }
+
+.step-card__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  margin-bottom: var(--space-sm);
+}
+.step-card__desc { font-size: 0.88rem; color: var(--color-muted); line-height: 1.6; }
+
+/* ── Link view all ───────────────────────────────────────────── */
+.link-all {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-green-dark);
+  white-space: nowrap;
+}
+.link-all:hover { text-decoration: underline; }

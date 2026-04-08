@@ -119,7 +119,7 @@ const CATALOGS = [
     name: 'Tupperware',
     desc: 'Contenedores, termos y soluciones para la cocina.',
     img: 'https://revistaunica.com.mx/wp-content/uploads/2024/10/tupperware.jpg',
-    pdf: '#',
+    pdf: 'https://drive.google.com/file/d/1NrUeLl7V8uYVOAASJSG9j92rQhwXWEg4/view?usp=drive_link',
   },
   {
     name: 'Betterware',

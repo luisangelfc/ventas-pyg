@@ -76,7 +76,7 @@ const WEEKLY_OFFERS = [
     oldPrice: '$890',
     discount: '−27%',
     stock: 30,
-    img: 'https://images.unsplash.com/photo-1570194065650-d99fb4bedf0a?w=400&q=80',
+    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYmCawMKa1D8rALXPzYFeJAFSUJ1O_eB3hwQ&s',
   },
   {
     name: 'Juego Bowls Fresh & Go 4 pzas',
@@ -85,7 +85,7 @@ const WEEKLY_OFFERS = [
     oldPrice: '$1,200',
     discount: '−26%',
     stock: 15,
-    img: 'https://images.unsplash.com/photo-1514190051997-0f6f39ca5cde?w=400&q=80',
+    img: 'https://prdcuscmscdn01.azureedge.net/royalprestige/images/royalprestigecolibraries/images/juego-de-4-tazones-para-mezclar/1_royal-prestige-4-piece-mixing-bowl-set_hero-image.tmb-large.jpg?sfvrsn=b1844a2a_8',
   },
   {
     name: 'Organizador de Cajones Slim',
@@ -94,7 +94,7 @@ const WEEKLY_OFFERS = [
     oldPrice: '$280',
     discount: '−32%',
     stock: 60,
-    img: 'https://images.unsplash.com/photo-1563453392212-326f5e854473?w=400&q=80',
+    img: 'https://http2.mlstatic.com/D_NQ_NP_752146-MLM100379635731_122025-O.webp',
   },
   {
     name: 'Colonia Essencial Masculina',
@@ -103,7 +103,7 @@ const WEEKLY_OFFERS = [
     oldPrice: '$620',
     discount: '−23%',
     stock: 45,
-    img: 'https://images.unsplash.com/photo-1541643600914-78b084683702?w=400&q=80',
+    img: 'https://production.na01.natura.com/dw/image/v2/BFKR_PRD/on/demandware.static/-/Sites-nat-mex-b2b2c-catalog/default/dw35808787/ProdutoJoia/mobile/93619.jpg',
   },
 ];
 

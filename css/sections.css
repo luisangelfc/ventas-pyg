@@ -36,12 +36,12 @@
   border-radius: 50%;
   object-fit: cover;
 }
-.topbar__logo-accent { color: var(--color-green); }
+.topbar__logo-accent { color: var(--color-primary); }
 
 /* ── Hero ────────────────────────────────────────────────────── */
 .hero {
   position: relative;
-  background: linear-gradient(135deg, #0f1117 0%, #1a2336 60%, #0d2818 100%);
+  background: linear-gradient(135deg, #4A485A 0%, #2B2A36 60%, #1D1C24 100%);
   padding-block: 80px 90px;
   overflow: hidden;
 }
@@ -55,14 +55,14 @@
 .hero__circle--green {
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(37, 211, 102, 0.18) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 199, 199, 0.18) 0%, transparent 70%);
   top: -120px;
   right: -100px;
 }
 .hero__circle--amber {
   width: 300px;
   height: 300px;
-  background: radial-gradient(circle, rgba(245, 158, 11, 0.12) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(135, 133, 162, 0.15) 0%, transparent 70%);
   bottom: -80px;
   left: 60px;
 }
@@ -77,9 +77,9 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-sm);
-  background-color: rgba(37, 211, 102, 0.15);
-  border: 1px solid rgba(37, 211, 102, 0.3);
-  color: var(--color-green);
+  background-color: rgba(255, 199, 199, 0.15);
+  border: 1px solid rgba(255, 199, 199, 0.3);
+  color: var(--color-primary);
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.07em;
@@ -94,7 +94,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: var(--color-green);
+  background-color: var(--color-primary);
   flex-shrink: 0;
 }
 
@@ -109,7 +109,7 @@
 }
 .hero__title em {
   font-style: normal;
-  color: var(--color-green);
+  color: var(--color-primary);
 }
 
 .hero__sub {
@@ -150,13 +150,13 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: var(--color-green);
+  background-color: var(--color-primary);
   flex-shrink: 0;
 }
 
 /* ── Urgency Banner ──────────────────────────────────────────── */
 .urgency-banner {
-  background: linear-gradient(90deg, var(--color-coral) 0%, #ff8c42 100%);
+  background: linear-gradient(90deg, var(--color-coral) 0%, var(--color-gold) 100%);
   color: #fff;
   text-align: center;
   padding: 14px var(--space-md);
@@ -199,7 +199,7 @@
 
 /* ── Weekly Section ──────────────────────────────────────────── */
 .weekly-section {
-  background: linear-gradient(135deg, #0f1117, #1a2336);
+  background: linear-gradient(135deg, #2B2A36, #1D1C24);
   padding-block: var(--space-2xl);
   position: relative;
   overflow: hidden;
@@ -211,7 +211,7 @@
 .weekly-section__glow {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 80% 50%, rgba(37, 211, 102, 0.08) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 80% 50%, rgba(255, 199, 199, 0.08) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -246,14 +246,14 @@
     left: calc(33.33% - 20px);
     right: calc(33.33% - 20px);
     height: 2px;
-    background: linear-gradient(90deg, var(--color-green), var(--color-amber), var(--color-coral));
+    background: linear-gradient(90deg, var(--color-primary), var(--color-coral), var(--color-gold));
     z-index: 0;
   }
 }
 
 /* ── CTA Section ─────────────────────────────────────────────── */
 .cta-section {
-  background: linear-gradient(135deg, #064e3b, #065f46, #0f1117);
+  background: linear-gradient(135deg, #4A485A, #2B2A36, #1D1C24);
   padding-block: var(--space-3xl);
   text-align: center;
   position: relative;
@@ -273,7 +273,7 @@
   width: 600px;
   height: 600px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(37, 211, 102, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 199, 199, 0.15) 0%, transparent 70%);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -302,4 +302,4 @@
 }
 
 .footer__text { font-size: 0.8rem; }
-.footer__brand { color: var(--color-green); }
+.footer__brand { color: var(--color-primary); }

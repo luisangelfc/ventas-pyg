@@ -4,18 +4,27 @@
 
 /* ── Variables globales ──────────────────────────────────────── */
 :root {
-  /* Paleta de color */
+  /* Paleta de color Nueva */
+  --color-primary:      #FFC7C7;
+  --color-secondary:    #FFE2E2;
+  --color-slate:        #8785A2;
+  --color-bg:           #F6F6F6;
+  
+  /* Mantenemos verde solo para el botón original de WA si es necesario */
   --color-green:        #25D366;
   --color-green-dark:   #128C7E;
-  --color-green-light:  #dcfce7;
-  --color-coral:        #FF6B6B;
-  --color-amber:        #F59E0B;
-  --color-ink:          #0f1117;
-  --color-ink-soft:     #2d3142;
-  --color-muted:        #6b7280;
-  --color-bg:           #faf9f6;
+  
+  /* Textos y fondos (legibilidad) */
+  --color-ink:          #2B2A36; /* Versión oscurecida del slate para texto legible */
+  --color-ink-soft:     #4A485A;
+  --color-muted:        #8785A2; /* Se usa el slate para texto secundario */
   --color-surface:      #ffffff;
-  --color-border:       #e9e5df;
+  --color-border:       #e8e6eb;
+
+  /* Auxiliares / Acentos (Dorado y Rosa intenso) */
+  --color-coral:        #E5707E; /* Rosa vibrante para acentos o descuentos */
+  --color-gold:         #DDA77B; /* Dorado Champagne para insignias premium */
+  --color-amber:        #DDA77B;
 
   /* Tipografía */
   --font-display: 'Playfair Display', Georgia, serif;
